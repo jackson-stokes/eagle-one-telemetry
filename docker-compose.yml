@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+# Service 1: Run Data Generator
+  data-engine:
+    build: .
+    container_name: eagle-one-generator
+    command: python data_generator.py
+    volumes:
+      - shared_data:/app
+
+# Service 2: Dashboard
+  dashboard:
+    build: .
+    container_name: eagle-one-dashboard
+    command: streamlit run dashboard.py --server.port 8501 --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    volumes:
+      - shared_data:/app
+    depends_on:
+      - data-engine
+
+volumes:
+  shared_data:

@@ -1,0 +1,26 @@
+{
+    "machine_info": {
+        "id": "Eagle-One-Midtown",
+        "output_file": "eagle_one_cloud_data.csv"
+    },
+    "simulation": {
+        "num_shots": 100,
+        "time_gap_min": 2,
+        "time_gap_max": 4
+    },
+    "targets": {
+        "pressure": 8.5,
+        "temperature": 93.2,
+        "extraction_time": 28.0
+    },
+    "variability": {
+        "pressure_std": 0.4,
+        "temp_std": 0.2,
+        "extraction_std": 4.0
+    },
+    "scoring_weights": {
+        "pressure_weight": 2.0,
+        "temp_weight": 5.0,
+        "extraction_weight": 0.5
+    }
+}
