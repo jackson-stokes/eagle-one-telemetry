@@ -1,4 +1,4 @@
-# ☕ Eagle One: IoT Espresso Telemetry Dashboard
+# ☕ Eagle One: Espresso Telemetry Dashboard
 
 **Eagle One** is a containerized data engineering project that simulates, processes, and visualizes telemetry data from a Victoria Ardiuno Eagle One espresso machine.
 
