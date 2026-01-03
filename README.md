@@ -43,7 +43,7 @@ It demonstrates an end-to-end data pipeline: generating synthetic sensor data wi
 ### Installation & Run
 1.  **Clone the repository**:
     ```bash
-    git clone [https://github.com/jackson-stokes/eagle-one-telemetry](https://github.com/jackson-stokes/eagle-one-telemetry)
+    git clone [https://github.com/YOUR_USERNAME/eagle-one-telemetry.git](https://github.com/YOUR_USERNAME/eagle-one-telemetry.git)
     cd eagle-one-telemetry
     ```
 
