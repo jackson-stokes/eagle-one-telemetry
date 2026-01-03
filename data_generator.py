@@ -51,9 +51,9 @@ def score_shot(row):
     
     # Calculate penalties for distance from targets
     # Scaled by weight representing importance
-    temp_penalty = abs(row['temp_celsius'] - target_temp) * config['scoring_weights']['temperature']
-    p_penalty = abs(row['pressure_bar'] - target_p) * config['scoring_weights']['pressure']
-    e_penalty = abs(row['extraction_sec'] - target_e) * config['scoring_weights']['extraction']
+    temp_penalty = abs(row['temp_celsius'] - target_temp) * config['scoring_weights']['temp_weights']
+    p_penalty = abs(row['pressure_bar'] - target_p) * config['scoring_weights']['pressure_weight']
+    e_penalty = abs(row['extraction_sec'] - target_e) * config['scoring_weights']['extraction_weight']
     
     score = 10.0 - (p_penalty + e_penalty + temp_penalty)
     return max(0, min(10, score))
