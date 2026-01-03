@@ -70,3 +70,20 @@ It demonstrates an end-to-end data pipeline: generating synthetic sensor data wi
     "temperature": 94.0,   // Increase target temp
     "extraction_time": 30.0
 }
+```
+Note: If you change the config, restart the containers to apply changes.
+
+## 📊 How it Works
+
+The project consists of two isolated services sharing a Docker Volume:
+
+1.  **`data_generator`**:
+    * Reads `config.json`.
+    * Generates `N` number of shots using NumPy normal distributions.
+    * Calculates a calculated `quality_score` (0-10).
+    * Writes to `eagle_one_cloud_data.csv` in the shared volume.
+
+2.  **`dashboard`**:
+    * Watches `eagle_one_cloud_data.csv`.
+    * Calculates aggregate health metrics (Mean Pressure, Critical Count).
+    * Renders charts using Plotly.
