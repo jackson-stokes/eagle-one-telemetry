@@ -1,6 +1,6 @@
 # ☕ Eagle One: IoT Espresso Telemetry Dashboard
 
-**Eagle One** is a containerized data engineering project that simulates, processes, and visualizes telemetry data from a commercial espresso machine.
+**Eagle One** is a containerized data engineering project that simulates, processes, and visualizes telemetry data from a Victoria Ardiuno Eagle One espresso machine.
 
 It demonstrates an end-to-end data pipeline: generating synthetic sensor data with statistical drift, storing it via shared volumes, and visualizing real-time quality metrics using an interactive dashboard.
 
